@@ -1,16 +1,6 @@
 <view class="section">
   <input   bindinput="bindKeyInput" placeholder="输入产品编号"/>
-  <button  bindtap="bindButtonTap">搜索</button> 
-  <view class="widgets__item"  wx:for-items="{{array}}" wx:for-item="item" > 
-    <view id="{{item.NO}}"class="widgets__info"   bindtap="onimageClick"  >
-              <image class="widget__img" src="{{item.Name}}"></image>
-              <view  class="widgettext">
-                  <view class="widget_text1">{{item.NO}}</view>
-                  <view class="widget_text2">{{item.PrdName}}</view>           
-              </view>
-          </view>
-          <view class="widget__line"></view> 
-  </view>
+  <button  bindtap='bindButtonTap'>搜索</button> 
 
   <view wx:for="{{item_list}}"  wx:for-item="items" >
      {{items}}

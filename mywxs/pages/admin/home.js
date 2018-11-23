@@ -1,6 +1,5 @@
 var app = getApp()
 var inputContent = {}//重要代码
-
 const date = new Date()
 const years = []
 const months = []
@@ -17,7 +16,6 @@ for (let i = 1; i <= 12; i++) {
 for (let i = 1; i <= 31; i++) {
   days.push(i)
 }
-
 var pageData = {}
 for (var i = 1; i < 5; i++) {
   (function (index) {
@@ -26,10 +24,6 @@ for (var i = 1; i < 5; i++) {
     }
   })(i)
 }
-Page(pageData)
-
-
-
 Page({
   data: {
     array: [],
@@ -44,7 +38,6 @@ Page({
     days: days,
     day: 2,
     value: [9999, 1, 1],
-
     items: [
       { name: 'USA', value: '美国' },
       { name: 'CHN', value: '中国', checked: 'true' },
@@ -69,13 +62,8 @@ Page({
       day: this.data.days[val[2]]
     })
   },
-
-
-
-
-  //----------------------------------------------------------------------  
-  onLoad: function () {
-    console.log('form发生了reset事件')
+  onLoad: function (e) {
+    console.info('form发生了reset事件')
     //页面显示时执行这里面的方法 生命周期以后会讲
     var that = this;
     wx.request({
@@ -89,21 +77,16 @@ Page({
       }
     })
   },
-  //事件处理函数
-  onimageClick: function (event) {
-    wx.navigateTo({
-      url: 'http://116.236.115.123:8080/test.php',
-    })
-  },
   //------------------------------------------------------------
   bindChange: function (e) {
     inputContent = e.detail.value
   },
   bindButtonTap: function (e) {
-    console.log('form发生了reset事件', inputContent['id'])
+    //console.log('form发生了reset事件', inputContent['id']);
+    console.info("xxxxxxxxxxxxx");
     var that = this;
     wx.request({
-      url: ("http://116.236.115.123:8080/test.php"),//z重要代码
+      url: ("http://116.236.115.123:8080/test.php"),
       method: 'GET',
       success: function (res) {   
         //console.log(res);
@@ -112,7 +95,6 @@ Page({
       }
     })
   },
-
   switch1Change: function (e) {
     console.log('switch1 发生 change 事件，携带值为', e.detail.value)
   },
@@ -120,15 +102,11 @@ Page({
     console.log('switch2 发生 change 事件，携带值为', e.detail.value)
   },
 
-  bindButtonTap: function () {
-    this.setData({
-      focus: true
-    })
-  },
   bindTextAreaBlur: function (e) {
     console.log(e.detail.value)
   },
   bindFormSubmit: function (e) {
-    console.log(e.detail.value.textarea)
+    console.info("xxxxxxxxxd");
+    console.log(e.detail.value.textarea);   
   }
 })
