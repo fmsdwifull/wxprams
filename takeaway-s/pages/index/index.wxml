@@ -1,0 +1,8 @@
+<!--index.wxml-->
+<view class="container" >
+	<view >
+		<view>
+			<image class="icon" src="/imgs/index/icon_location.png"/>
+		</view>
+	</view>
+</view>

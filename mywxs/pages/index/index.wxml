@@ -1,0 +1,21 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> woodcarverx </button>
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+  </view>
+  <view class="usermotto">
+    <text class="user-motto">{{motto}}</text>
+  </view>
+  <view> {{ message }} </view>
+  <view wx:for="{{array}}">
+     {{index}}: {{item.message}}
+  </view>
+  <view>
+      <image class="widget__arrow" src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1534752266046&di=8f0153c7b52a801b88fda69bfe51c286&imgtype=0&src=http%3A%2F%2Fwww.wykj0537.cn%2Fdata%2Fimages%2Fproduct%2F20171215142319_255.jpg" mode="aspectFill">
+  </image>
+  </view>  
+</view>

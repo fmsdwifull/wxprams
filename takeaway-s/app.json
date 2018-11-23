@@ -1,0 +1,14 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/logs/logs"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#feb70f",
+    "navigationBarTitleText": "外卖订餐",
+    "navigationBarTextStyle":"white",
+    "backgroundColor": "#efefef",
+    "backgroundTextStyle": "dark"
+  }
+}
